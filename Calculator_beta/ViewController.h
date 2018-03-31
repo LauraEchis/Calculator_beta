@@ -7,8 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CalcBrain.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    IBOutlet UILabel *display;
+    CalcBrain *brain;
+}
+
+-(IBAction)digitPressed:(UIButton *)sender;
+-(IBAction)operationPressed:(UIButton *)sender;
 
 
 @end

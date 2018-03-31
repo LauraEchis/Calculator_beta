@@ -1,29 +1,38 @@
-//
-//  ViewController.m
-//  Calculator_beta
-//
-//  Created by Admin on 31.03.2018.
-//  Copyright © 2018 StscherbininaA. All rights reserved.
-//
-
 #import "ViewController.h"
 
-@interface ViewController ()
-
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+@interface ViewController : UIViewController {
+    IBOutlet UILabel *display;
+    CalcBrain *brain;
+    BOOL userIsInTheMiddleOfTypingANumber;
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (CalcBrain *)brain
+{
+    if (!brain) brain = [[CalcBrain alloc] init];
+    return brain;
 }
 
+
+- (IBAction)operationPressed:(UIButton *)sender {
+    if (userIsInTheMiddleOfTypingANumber) {
+        [[self brain] setOperand:[[display text] doubleValue]];
+        userIsInTheMiddleOfTypingANumber = NO;
+    }
+    NSString *operation = [[sender titleLabel] text];
+    double result = [[self brain] performOperation:operation];
+    [display setText: [NSString stringWithFormat:@"%g", result]];
+}
+
+- (IBAction)digitPressed:(UIButton *)sender {
+    NSString *digit = [[sender titleLabel] text];
+    
+    if (userIsInTheMiddleOfTypingANumber) {
+        [display setText:[[display text] stringByAppendingString:digit]];
+    } else {
+        [display setText:digit];
+        userIsInTheMiddleOfTypingANumber = YES;
+    }
+}
 
 @end
