@@ -13,6 +13,7 @@
 		845F42F8206F6E4100C5BD86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845F42F7206F6E4100C5BD86 /* Assets.xcassets */; };
 		845F42FB206F6E4100C5BD86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845F42F9206F6E4100C5BD86 /* LaunchScreen.storyboard */; };
 		845F42FE206F6E4100C5BD86 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845F42FD206F6E4100C5BD86 /* main.m */; };
+		845F4306206F703500C5BD86 /* CalcBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 845F4305206F703500C5BD86 /* CalcBrain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		845F42FA206F6E4100C5BD86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		845F42FC206F6E4100C5BD86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		845F42FD206F6E4100C5BD86 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		845F4304206F703500C5BD86 /* CalcBrain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalcBrain.h; sourceTree = "<group>"; };
+		845F4305206F703500C5BD86 /* CalcBrain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalcBrain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				845F42F9206F6E4100C5BD86 /* LaunchScreen.storyboard */,
 				845F42FC206F6E4100C5BD86 /* Info.plist */,
 				845F42FD206F6E4100C5BD86 /* main.m */,
+				845F4304206F703500C5BD86 /* CalcBrain.h */,
+				845F4305206F703500C5BD86 /* CalcBrain.m */,
 			);
 			path = Calculator_beta;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				845F42F3206F6E4100C5BD86 /* ViewController.m in Sources */,
+				845F4306206F703500C5BD86 /* CalcBrain.m in Sources */,
 				845F42FE206F6E4100C5BD86 /* main.m in Sources */,
 				845F42F0206F6E4100C5BD86 /* AppDelegate.m in Sources */,
 			);
